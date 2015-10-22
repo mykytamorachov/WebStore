@@ -18,18 +18,21 @@
 		<script src='src/js/services/ProductsService.js'></script>
 		<script src='src/js/services/CustomerService.js'></script>
 
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 	<body>
-		<ul class="breadcrumb">
-		  <li><a ui-sref="main">Home</a> </li>
-		  <li><a ui-sref="cart">Cart</a> </li>
-		  <li><a ui-sref="customer_info">Customer information form</a></li>
-		  <li><a ui-sref="confirmation">Confirmation</a></li>
-		</ul>
+		<nav>
+	    <div class="nav-wrapper">
+	      <ul id="nav-mobile" class="left hide-on-med-and-down">
+	        <li><a ui-sref="main">Home</a></li>
+	        <li><a ui-sref="cart">Cart</a></li>
+	        <li><a ui-sref="customer_info">Customer information</a></li>
+	        <li><a ui-sref="confirmation">Confirmation</a></li>
+	      </ul>
+	    </div>
+	  </nav>
+
 	  <div ui-view></div>
 	</body>
 </html>

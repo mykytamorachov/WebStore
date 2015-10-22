@@ -1,12 +1,12 @@
 angular.module('WebStore').config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/home");
   //
   // set up the states
   $stateProvider
-    .state('main', {
-      url: "/",
+    .state('home', {
+      url: "/home",
       controller:"MainController",
       templateUrl: "src/js/views/main.html"
     })
@@ -24,5 +24,5 @@ angular.module('WebStore').config(function($stateProvider, $urlRouterProvider) {
       url: "/confirmation",
       controller:"ConfirmationController",
       templateUrl: "src/js/views/confirmation.html"
-    })
+    });
 });

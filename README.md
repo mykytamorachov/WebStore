@@ -13,6 +13,7 @@
 - Write a breadcrumps controller, to highight active step and to block inactive, that user can not access
 - Make form validation better
 - Update the design and probably use another library
+- Move fonts from GoogleFonts to local
 
 ## Why I chose AngularJs?
 
