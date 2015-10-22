@@ -1,0 +1,23 @@
+<div class="row">
+  <form class="col s12" name="customerForm" ng-submit="submit()">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="name" name="first_name" ng-model="name" required type="text" class="validate">
+        <label for="name">First Name</label>
+      </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="email" name="email" ng-model="email" required type="email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <a ui-sref="cart" class="waves-effect waves-light btn left">
+	<i class="material-icons left">shop</i>
+	Approve and proceed
+</a>
+    <a ui-sref="customer_info" ng-click="submit()" class="waves-effect waves-light btn right">
+			<i class="material-icons left">shop</i>
+			Approve and proceed
+		</a>
+  </form>
+</div>

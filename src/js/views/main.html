@@ -1,0 +1,18 @@
+
+<ul class="collection" >
+	<li class="collection-item avatar" ng-repeat='item in products'>
+	  <img src="src/images/{{item.id}} - {{item.name}}.jpg" alt="" class="circle">
+	  <span class="title">{{item.name}}</span>
+	  <p>Price: {{item.price}} $</p>
+	  <input placeholder='enter number of goods' type="number" ng-model='prods'>
+	  <a class="waves-effect waves-light btn" ng-click="addProduct(item.id, item.name, item.price, prods)">
+	  	<i class="material-icons left">shopping_cart</i>
+	  	Add to cart
+	  </a>
+	</li>
+</ul>
+<a ui-sref="cart" class="waves-effect waves-light btn right">
+	<i class="material-icons left">shopping_cart</i>
+	Proceed to Cart
+</a>
+<span ng-bind="prods"></span>

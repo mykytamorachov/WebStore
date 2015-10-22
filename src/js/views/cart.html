@@ -1,0 +1,27 @@
+
+<ul class="collection" ng-if="products">
+	<li class="collection-item avatar" ng-repeat='item in products track by $index'>
+	  <img src="src/images/{{item.id}} - {{item.name}}.jpg" alt="" class="circle">
+	  <span class="title">{{item.name}}</span>
+	  <p>Price: {{item.price}} $</p>
+	  Quantity: <input type="number" ng-value='item.quantity' ng-model="item.quantity">
+	   <a ng-click="removeProduct(item.id)" class="secondary-content">
+	   	<i class="material-icons medium">delete</i>
+	   </a>
+	</li>
+</ul>
+
+<div ng-hide="products.length"> No products yet, go to shop and buy something :)</div>
+
+<div class="row" ng-if="total()">
+	<blockquote class='right'> Total: {{total()}} $</blockquote>
+</div>
+
+<a ui-sref="main" class="waves-effect waves-light btn left">
+	<i class="material-icons left">store</i>
+	Get Back Shopping
+</a>
+<a ui-sref="customer_info" class="waves-effect waves-light btn right">
+	<i class="material-icons left">shop</i>
+	Approve and proceed
+</a>

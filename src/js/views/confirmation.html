@@ -1,0 +1,15 @@
+<div class="row">
+      <div class="col s6">Customer: {{customer.name}}</div>
+      <div class="col s6">Email: {{customer.email}}</div>
+    </div>
+<ul class="collection" ng-if="products">
+	<li class="collection-item avatar" ng-repeat='item in products track by $index'>
+	  <img src="src/images/{{item.id}} - {{item.name}}.jpg" alt="" class="circle">
+	  <span class="title">{{item.name}}</span>
+	  <p>Price: {{item.price}} $</p>
+	  Quantity: {{item.quantity}}
+	</li>
+</ul>
+<div class="row" ng-if="total()">
+	<blockquote class='right'> Total: {{total()}} $</blockquote>
+</div>
